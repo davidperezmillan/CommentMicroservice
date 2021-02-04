@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: comment
+
+server:
+  port: 8002
+
+#Eureka Configuration Properties  
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka
+
+logging:
+  level:
+    com:
+      davidperezmillan:
+        sandbox: DEBUG
+    root: WARN
+  pattern:
+    console: '%d | %-20.20thread | %5p | %-25.25logger{25} | %12(ID: %8mdc{id}) |
+      %m%n'
+    dateformat: yyyy-MM-dd HH:mm:ss
